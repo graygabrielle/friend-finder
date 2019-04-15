@@ -1,0 +1,15 @@
+* {
+    /* Positioning */
+    margin: 0;
+    vertical-align: baseline;
+    /* Box-model */
+    padding: 0;
+    /* Typography */
+    font-size: 100%;
+    font: inherit;
+    /* Visual */
+    border: 0;
+  }
+#range {
+    width: 300px;
+}

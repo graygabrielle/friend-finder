@@ -4,9 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>     
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Friend Finder Survey</title>
 </head>
 <body>
-    <h1>Survey!</h1>
+    <header>
+        <h1>Compatibility Survey</h1>
+    </header>
+    <main>
+        <form>
+            <h2>About You</h2>
+
+            <label for="name">Your full name:</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+            <label for="age">Your age:</label>
+            <input type="number" id="age" name="age" placeholder="32" required>
+
+            <label for="profile-pic">Link to photo for your profile pic:</label>
+            <input type="url" id="profile-pic" name="profile-pic" placeholder="https://myprofilepic.me" required>
+
+            <h2>Agree or Disagree</h2>
+            <h3>Rate each statement on a scale from 1 to 5</h3>
+            <h4>(1 = strongly disagree | 3 = neutral | 5 = strongly agree)</h4>
+
+            <p class="range-field" id="range">
+                <label for="q1">You love staying in and watching a movie on Saturday night.</label>
+                <input type="range" id="q1" name="q1" min="1" max="5">
+            </p>
+            <p class="range-field" id="range">
+                <label for="q2">You put your family before your career.</label>
+                <input type="range" id="q2" name="q2" min="1" max="5">
+            </p>
+            <p class="range-field" id="range">
+                <label for="q3">You love staying in and watching a movie on Saturday night.</label>
+                <input type="range" id="q3" name="q3" min="1" max="5">
+            </p>
+            <p class="range-field" id="range">
+                <label for="q4">You love staying in and watching a movie on Saturday night.</label>
+                <input type="range" id="q4" name="q4" min="1" max="5">
+            </p>
+            <p class="range-field" id="range">
+                <label for="q5">You love staying in and watching a movie on Saturday night.</label>
+                <input type="range" id="q5" name="q5" min="1" max="5">
+            </p>
+            <p class="range-field" id="range">
+                <label for="q6">You love staying in and watching a movie on Saturday night.</label>
+                <input type="range" id="q6" name="q6" min="1" max="5">
+            </p>
+            <p class="range-field" id="range">
+                <label for="q7">You love staying in and watching a movie on Saturday night.</label>
+                <input type="range" id="q7" name="q7" min="1" max="5">
+            </p>
+            <p class="range-field" id="range">
+                <label for="q8">You love staying in and watching a movie on Saturday night.</label>
+                <input type="range" id="q8" name="q8" min="1" max="5">
+            </p>
+            <p class="range-field" id="range">
+                <label for="q9">You love staying in and watching a movie on Saturday night.</label>
+                <input type="range" id="q9" name="q9" min="1" max="5">
+            </p>
+            <p class="range-field" id="range">
+                <label for="q10">You love staying in and watching a movie on Saturday night.</label>
+                <input type="range" id="q10" name="q10" min="1" max="5">
+            </p>
+        </form>
+
+    </main>
+    <footer></footer>
+
+
+<script>
+    var array_of_dom_elements = document.querySelectorAll("input[type=range]");
+    M.Range.init(array_of_dom_elements);
+</script>
 </body>
 </html>
