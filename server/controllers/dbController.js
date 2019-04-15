@@ -4,7 +4,7 @@ const dbController = {
     get: async function(req, res){
         const goodMatch = await db.User.findOne({
             where: {
-                surveyAnswers: (req.body || req.body+1 || req.body-1 || req.body+2 || req.body-2)
+                surveyAnswers: (x)
             }
         });
         res.json(goodMatch); 
