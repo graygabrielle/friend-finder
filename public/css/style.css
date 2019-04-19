@@ -11,19 +11,31 @@
     border: 0;
     box-sizing: border-box;
   }
+  
 #range {
-    width: 300px;
+    width: 30em;
+}
+
+.survey {
+    color: black;
+    text-align: center;
+}
+
+p.range-field {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5em;
 }
 
 .section {
     margin: 0;
     margin-top: 30px;
-    background-color: yellow;
+    background-color: rgb(171, 98, 255);
 }
 
 .subsection {
-    margin: 0;
-    background-color: orange;
+    margin: 0 0 5em 0;
+    background-color: rgb(104, 184, 255);
 }
 
 body {
@@ -85,6 +97,7 @@ body {
     margin-bottom: 8vh;
 }
 
+
 .btn:link,
 .btn:visited{
     text-transform: uppercase;
@@ -144,6 +157,14 @@ body {
 
 }
 
+#survey-nav {
+    background-color: blue
+}
+
+#survey-footer {
+    background-color: blueviolet;
+}
+
 
 
 @keyframes fadeIn {
@@ -188,7 +209,7 @@ flex: 1 0 auto;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 h3 {
@@ -200,10 +221,10 @@ h4 {
 }
 
 h5 {
-    font-size: 1.3em;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 label {
     font-size: 1.3em;
 }
-

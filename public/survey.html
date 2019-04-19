@@ -9,12 +9,13 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/style.css">
     <title>Friend Finder Survey</title>
 </head>
 <body>
-    <nav>
+    <nav  id="survey-nav">
         <div class="nav-wrapper container">
             <a href="/" class="brand-logo">Friend Finder</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -23,7 +24,7 @@
             </ul>
         </div>
     </nav>
-    <main class="container">
+    <main class="container survey">
         <form>
             <h2 class="center section">About You</h2>
 
@@ -37,12 +38,15 @@
             <label for="profile-pic">Link to photo for your profile pic:</label>
 
             <h2 class="center section">Agree or Disagree</h2>
-            <h3 class="center subsection">Rate each statement on a scale from 1 to 5</h3>
-            <h4 class="center subsection">(1 = strongly disagree | 3 = neutral | 5 = strongly agree)</h4>
+            <div class="subsection">            
+                <h3 class="center">Drag the slider to rate each statement on a scale from 1 to 5</h3>
+                <h4 class="center">(1 = strongly disagree | 3 = neutral | 5 = strongly agree)</h4>
+            </div>
+
 
             <div class="row">
 
-                <div class="col s6">
+                <div class="col s12 l6">
 
                     <h5>You enjoy going out on Saturday night.</h5>
                     <p class="range-field" id="range">
@@ -85,7 +89,7 @@
                     </p>
                 </div>
 
-                <div class="col s6">
+                <div class="col s12 l6">
 
                     <h5>You're highly independent.</h5>
                     <p class="range-field" id="range">
@@ -129,10 +133,12 @@
                 </div>
             </div>
 
+            <button class="submit btn">find your match</button>
+
         </form>
 
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer" id="survey-footer">
         <div class="container">
             <div class="row">
             <div class="col l6 s12">
