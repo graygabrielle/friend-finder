@@ -35,11 +35,11 @@ body {
     font-size: 10px;
     line-height: 1.7;
     color: #fff;
-    padding: 30px;
+    padding: 3vh;
 }
 
 .header {
-    height: 90vh;
+    height: 94vh;
     position: relative;
     background-image:linear-gradient(to right bottom, rgba(0, 61, 215, 0.7), rgba(139, 123, 218, 0.7)), url("../img/couple.jpg");
     background-size: cover;
@@ -52,7 +52,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     text-transform: uppercase;
     text-align: center;
     white-space: nowrap;
@@ -62,34 +62,35 @@ body {
 
 .header-main {
     display: block;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
     animation-name: moveInRight;
     animation-fill-mode: backwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-duration: 2s;
     animation-timing-function: ease;
 }
 
 .header-secondary {
     display: block;
-    font-size: 2em;
+    font-size: 1.75em;
     font-weight: normal;
-    letter-spacing: 15px;
+    letter-spacing: 10px;
     animation-name: moveInLeft;
     animation-fill-mode: backwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-duration: 2s;
     animation-timing-function: ease;
-    margin-bottom: 12vh;
+    margin-bottom: 8vh;
 }
 
 .btn:link,
 .btn:visited{
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
     padding: 15px 40px;
     display: inline-block;
     border-radius: 100px;
