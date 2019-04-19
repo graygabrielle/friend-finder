@@ -7,6 +7,14 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1]
             }
         },
+        userGender: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        lookingForGender: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         profilePicture: {
             type: DataTypes.STRING,
             allowNull: false
