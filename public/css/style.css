@@ -32,7 +32,7 @@ body {
     flex-direction: column;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 10px;
     line-height: 1.7;
     color: #fff;
     padding: 30px;
@@ -43,7 +43,7 @@ body {
     position: relative;
     background-image:linear-gradient(to right bottom, rgba(0, 61, 215, 0.7), rgba(139, 123, 218, 0.7)), url("../img/couple.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
 }
@@ -52,7 +52,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
     text-align: center;
     white-space: nowrap;
@@ -62,24 +62,24 @@ body {
 
 .header-main {
     display: block;
-    font-size: 50px;
-    font-weight: bolder;
+    font-size: 5em;
+    font-weight: bold;
     letter-spacing: 20px;
     animation-name: moveInRight;
     animation-fill-mode: backwards;
-    animation-delay: 1s;
+    animation-delay: 2s;
     animation-duration: 2s;
     animation-timing-function: ease;
 }
 
 .header-secondary {
     display: block;
-    font-size: 20px;
-    font-weight: bolder;
+    font-size: 2em;
+    font-weight: normal;
     letter-spacing: 15px;
     animation-name: moveInLeft;
     animation-fill-mode: backwards;
-    animation-delay: 1s;
+    animation-delay: 2s;
     animation-duration: 2s;
     animation-timing-function: ease;
     margin-bottom: 12vh;
@@ -89,6 +89,7 @@ body {
 .btn:visited{
     text-transform: uppercase;
     text-decoration: none;
+    font-size: 2em;
     padding: 15px 40px;
     display: inline-block;
     border-radius: 100px;
@@ -96,7 +97,7 @@ body {
     animation: fadeIn 4s 2s;
     animation-fill-mode: backwards;
     color: rgba(0, 61, 215);
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: 2px;
     position: relative;
 
