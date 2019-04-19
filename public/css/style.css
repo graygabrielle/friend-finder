@@ -66,6 +66,8 @@ body {
     font-weight: bolder;
     letter-spacing: 20px;
     animation-name: moveInRight;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
     animation-duration: 2s;
     animation-timing-function: ease;
 }
@@ -76,6 +78,8 @@ body {
     font-weight: bolder;
     letter-spacing: 15px;
     animation-name: moveInLeft;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
     animation-duration: 2s;
     animation-timing-function: ease;
     margin-bottom: 12vh;
@@ -89,7 +93,7 @@ body {
     display: inline-block;
     border-radius: 100px;
     /* transition: all .2s; */
-    animation: fadeIn 2s 2s;
+    animation: fadeIn 4s 2s;
     animation-fill-mode: backwards;
     color: rgba(0, 61, 215);
     font-weight: 500;
