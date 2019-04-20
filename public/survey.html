@@ -15,77 +15,94 @@
     <title>Friend Finder Survey</title>
 </head>
 <body>
-    <nav  id="survey-nav">
-        <div class="nav-wrapper container">
-            <a href="/" class="brand-logo">Friend Finder</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
-                <li><a href="/survey">Survey</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main class="container survey">
+    <main>
         <form>
-            <h2 class="center section">About You</h2>
-
-            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
-            <label for="name">Your full name:</label>
-
-            <input type="number" id="age" name="age" placeholder="32" required>
-            <label for="age">Your age:</label>
-
-            <input type="url" id="profile-pic" name="profile-pic" placeholder="https://myprofilepic.me" required>
-            <label for="profile-pic">Link to photo for your profile pic:</label>
-
-            <div class="row">
-                <div class="col s6">
-                    <p>You are:</p>
-
-                    <label class="cont">female
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    </label>
-                    
-                    <label class="cont">male
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    </label>
-                    
-                    <label class="cont">other
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    </label>
+            <section class="header2">
+                <div class="header-div-survey">
+                    <h2 class="header-survey">About You</h2>
+                    <a href="#basic-info" class="button2 button-white">basic info</a>
+                </div>
+            </section>
+            <section class="survey" id="basic-info">
+                <div class="row">
+                <div class="input-field col s12 m6">
+                    <input id="first-name" type="text" class="validate" name="first-name" required>
+                    <label for="first-name">First name</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="last-name" type="text" class="validate" name="last-name" required>
+                    <label for="last-name">Last name</label>
                 </div>
 
-                <div class="col s6">
-                    <p>You're looking for:</p>
-
-                    <label class="cont">female
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    </label>
-                    
-                    <label class="cont">male
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    </label>
-                    
-                    <label class="cont">any
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    </label>
+                <div class="input-field col s12 m6">
+                    <input type="number" id="age" name="age"  required>
+                    <label for="age">Age</label>
                 </div>
-            </div>
 
-            <h2 class="center section">Agree or Disagree</h2>
-            <div class="subsection">            
-                <h3 class="center">Drag the slider to rate each statement on a scale from 1 to 5</h3>
+                <div class="input-field col s12 m6">
+                    <input type="url" id="profile-pic" name="profile-pic" required>
+                    <label for="profile-pic">Link to profile picture</label>
+                </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m6">
+
+                        <p class="left-align">You are:</p>
+                        <label class="radio left-align">
+                            <input name="user-gender" type="radio" required>
+                            <span>female</span>
+                        </label>
+
+                        <label class="radio left-align">
+                            <input name="user-gender" type="radio" required>
+                            <span>male</span>
+                        </label>
+
+                        <label class="radio left-align">
+                            <input name="user-gender" type="radio" required>
+                            <span>other</span>
+                        </label>
+                    </div>
+
+                    <div class="col s12 m6">
+
+                        <p class="left-align">Looking for:</p>
+                        <label class="radio left-align">
+                            <input name="looking-for" type="radio" required>
+                            <span>female</span>
+                        </label>
+
+                        <label class="radio left-align">
+                            <input name="looking-for" type="radio" required>
+                            <span>male</span>
+                        </label>
+
+                        <label class="radio left-align">
+                            <input name="looking-for" type="radio" required>
+                            <span>any</span>
+                        </label>
+        
+                    </div>
+                    <a href="#survey-header" class="button3">next</a>
+                </div>
+            </section>
+
+            <section id="survey-header">
+                <div class="header3">
+                    <div class="header-div">
+                        <h2 class="header-survey">Agree or Disagree</h2>
+                        <h3 class="header-explain">Drag the slider to rate each statement on a scale from 1 to 5</h3>
+                        <a href="#survey" class="button2 button-white">survey</a>
+                    </div>
+                </div>
+            </section>
+
+ 
+
+
+            <div class="row survey" id="survey">
                 <h4 class="center">(1 = strongly disagree | 3 = neutral | 5 = strongly agree)</h4>
-            </div>
-
-
-            <div class="row">
-
                 <div class="col s12 l6">
 
                     <h5>You enjoy going out on Saturday night.</h5>
@@ -178,36 +195,11 @@
         </form>
 
     </main>
-    <footer class="page-footer" id="survey-footer">
-        <div class="container">
-            <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-            </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-        </div>
-    </footer>
-
 
 <script>
     var array_of_dom_elements = document.querySelectorAll("input[type=range]");
     M.Range.init(array_of_dom_elements);
+
 </script>
 
 </body>
