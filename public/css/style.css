@@ -66,8 +66,18 @@ section {
     position: relative;
     background-image:linear-gradient(to right bottom, rgba(0, 61, 215, 0.7), rgba(139, 123, 218, 0.7)), url("../img/survey.jpg");
     background-size: cover;
-    background-position: center bottom;
+    background-position: center top;
     clip-path: polygon(0 17vh, 100% 3vh, 100% 83vh, 0 97vh);
+
+}
+
+.header4 {
+    height: 60vh;
+    position: relative;
+    background-image:linear-gradient(to right bottom, rgba(0, 61, 215, 0.7), rgba(139, 123, 218, 0.7)), url("../img/match.jpg");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0 100%);
 
 }
 
@@ -149,6 +159,19 @@ p.you-are {
     margin-bottom: 8vh;
 }
 
+h2.subheader {
+    padding-top: 2em;
+    font-size: 3em;
+    color: #3648a0;
+    font-weight: bold;
+}
+
+h3.subheader2 {
+    font-size: 2em;
+    color: #3648a0;
+    font-weight: normal;
+    margin-bottom: 2em;
+}
 
 .button:link,
 .button:visited {
@@ -161,7 +184,7 @@ p.you-are {
     border-radius: 100px;
     animation: fadeIn 2s 3s;
     animation-fill-mode: backwards;
-    color: rgba(0, 61, 215);
+    color: #3648a0;
     font-weight: bold;
     letter-spacing: 2px;
     position: relative;
@@ -179,7 +202,7 @@ p.you-are {
     border-radius: 100px;
     animation: fadeIn 3s .5s;
     animation-fill-mode: backwards;
-    color: rgba(0, 61, 215);
+    color: #3648a0;
     font-weight: bold;
     letter-spacing: 2px;
     position: relative;
@@ -188,11 +211,12 @@ p.you-are {
 
 .button3:link,
 .button3:visited {
+    margin-top: 3em;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
-    padding: 15px 40px;
+    padding: 15px 50px;
     display: inline-block;
     border-radius: 100px;
     animation: fadeIn 3s .5s;
