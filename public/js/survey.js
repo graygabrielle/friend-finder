@@ -30,13 +30,23 @@ document.getElementById("submit").addEventListener("click", function(e){
         // console.log(customLookingFor.value);
     }
 
+    
+    const surveyAnswers = [];
+
+    for(let i=1; i<17; i++) {
+        surveyAnswers.push($(`#q${i}`).val());
+    }
+
+    // console.log(surveyAnswers);
+
     const newUser = {
         firstName: $("#first-name").val().trim(),
         lastName: $("#last-name").val().trim(),
         profilePic: $("#profile-pic").val().trim(),
         age: $("#age").val().trim(),
-        userGender: $(".user-gender").val().trim(),
-        lookingFor: $(".looking-for").val().trim()
+        userGender: $("input[name='user-gender']:checked").val().trim(),
+        lookingFor: $("input[name='lookingFor']:checked").val().trim(),
+        surveyAnswers: surveyAnswers
     }
 
     $.post("/api", newUser)

@@ -21,8 +21,8 @@ const dbController = {
                 profilePicture: newUser.profilePic,
                 userAge: newUser.age,
                 userGender: newUser.userGender,
-                lookingFor: newUser.lookingFor
-                // surveyAnswers: newUser.surveyAnswers
+                lookingFor: newUser.lookingFor,
+                surveyAnswers: newUser.surveyAnswers
               });
               res.json(response);
             } catch(e) {
