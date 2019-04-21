@@ -55,25 +55,25 @@
                         <p class="grey-text lighten-1 left-align">You are:</p>
                         
                         <label class="radio left-align">
-                            <input name="user-gender" type="radio" required>
+                            <input name="user-gender" value="female" type="radio" required>
                             <span>female</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="user-gender" type="radio" required>
+                            <input name="user-gender" value="male" type="radio" required>
                             <span>male</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="user-gender" type="radio" required>
+                            <input name="user-gender" value="rather not say" type="radio" required>
                             <span>rather not say</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="user-gender" type="radio" id="radio-gender" value="custom" onclick="ShowHiddenDiv()" required>
+                            <input name="user-gender" type="radio" id="radio-gender" onclick="ShowHiddenDiv()" required>
                             <span>custom</span>
                             <span id="custom-gender" style="display: none">
-                            <input type="text" id="custom-box1" name="custom-gender">
+                            <input type="text" id="custom-box1">
                             </span>
                         </label>
 
@@ -83,25 +83,25 @@
 
                         <p class="grey-text lighten-1 left-align">Looking for:</p>
                         <label class="radio left-align">
-                            <input name="looking-for" type="radio" required>
+                            <input name="looking-for" value="female" type="radio" required>
                             <span>female</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="looking-for" type="radio" required>
+                            <input name="looking-for" value="male" type="radio" required>
                             <span>male</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="looking-for" type="radio" required>
+                            <input name="looking-for" value="all" type="radio" required>
                             <span>all</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="looking-for" type="radio" id="radio-looking" value="custom" onclick="ShowHiddenDiv2()" required>
+                            <input name="looking-for" type="radio" id="radio-looking" onclick="ShowHiddenDiv2()" required>
                             <span>custom</span>
                             <span id="custom-looking" style="display: none">
-                            <input type="text" id="custom-box1" name="custom-looking">
+                            <input type="text" id="custom-box1">
                             </span>
                         </label>
         
@@ -214,32 +214,14 @@
 
             <div class="header4">
                 <div class="header-div">
-                    <a href="#" class="button2 button-white">find your match</a>
+                    <a href="#" id="submit" class="button2 button-white">find your match</a>
                 </div>
             </div>
-
-            
 
         </form>
 
     </main>
 
-    <script>
-        var array_of_dom_elements = document.querySelectorAll("input[type=range]");
-        M.Range.init(array_of_dom_elements);
-
-        function ShowHiddenDiv() {
-            var custom = document.getElementById("radio-gender");
-            var dvtext = document.getElementById("custom-gender");
-            dvtext.style.display = custom.checked ? "block" : "none";
-        }
-
-        function ShowHiddenDiv2() {
-            var custom = document.getElementById("radio-looking");
-            var dvtext = document.getElementById("custom-looking");
-            dvtext.style.display = custom.checked ? "block" : "none";
-        }
-    </script>
-
+    <script src="js/survey.js"></script>
 </body>
 </html>
