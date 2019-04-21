@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const db = require("../db/models");
 const router = require("./routes");
+const db = require("../db/models");
 
 const PORT = process.env.PORT || 3000;
 
@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 //point app to routes
 app.use("/", router);
+
 
 app.listen(PORT, function () {
     console.log(`App listening on http://localhost:${PORT}`)

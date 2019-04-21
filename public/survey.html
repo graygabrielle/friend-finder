@@ -9,14 +9,15 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>    
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/style.css">
     <title>Friend Finder Survey</title>
 </head>
 <body>
     <main>
-        <form>
+        <form id="form" action="/api" method="POST">
             <section class="header2">
                 <div class="header-div-survey">
                     <h2 class="header-survey">About You</h2>
@@ -55,22 +56,22 @@
                         <p class="grey-text lighten-1 left-align">You are:</p>
                         
                         <label class="radio left-align">
-                            <input name="user-gender" value="female" type="radio" required>
+                            <input name="user-gender" class="user-gender" value="female" type="radio" required>
                             <span>female</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="user-gender" value="male" type="radio" required>
+                            <input name="user-gender" class="user-gender" value="male" type="radio" required>
                             <span>male</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="user-gender" value="rather not say" type="radio" required>
+                            <input name="user-gender" class="user-gender" value="rather not say" type="radio" required>
                             <span>rather not say</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="user-gender" type="radio" id="radio-gender" onclick="ShowHiddenDiv()" required>
+                            <input name="user-gender" type="radio" id="radio-gender" class="user-gender" onclick="ShowHiddenDiv()" required>
                             <span>custom</span>
                             <span id="custom-gender" style="display: none">
                             <input type="text" id="custom-box1">
@@ -83,25 +84,25 @@
 
                         <p class="grey-text lighten-1 left-align">Looking for:</p>
                         <label class="radio left-align">
-                            <input name="looking-for" value="female" type="radio" required>
+                            <input name="lookingFor" value="female" class="looking-for" type="radio" required>
                             <span>female</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="looking-for" value="male" type="radio" required>
+                            <input name="lookingFor" class="looking-for" value="male" type="radio" required>
                             <span>male</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="looking-for" value="all" type="radio" required>
+                            <input name="lookingFor" class="looking for" value="all" type="radio" required>
                             <span>all</span>
                         </label>
 
                         <label class="radio left-align">
-                            <input name="looking-for" type="radio" id="radio-looking" onclick="ShowHiddenDiv2()" required>
+                            <input name="lookingFor" class="looking-for" type="radio" id="radio-looking" onclick="ShowHiddenDiv2()" required>
                             <span>custom</span>
                             <span id="custom-looking" style="display: none">
-                            <input type="text" id="custom-box1">
+                            <input type="text" id="custom-box2">
                             </span>
                         </label>
         
@@ -214,7 +215,7 @@
 
             <div class="header4">
                 <div class="header-div">
-                    <a href="#" id="submit" class="button2 button-white">find your match</a>
+                    <input type="submit" value="find your match" id="submit" class="button2 button-white">
                 </div>
             </div>
 

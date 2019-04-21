@@ -1,4 +1,6 @@
 const path = require("path");
+const db = require("../../db/models");
+const express = require("express");
 
 const dbController = {
     get: async function(req, res){
@@ -10,13 +12,17 @@ const dbController = {
         res.json(goodMatch); 
     },
     post: async function(req, res){
+      console.log(req.body);
             try {
               const newUser = req.body;
               const response = await db.User.create({
-                displayName: newUser.fullName,
-                profilePicture: newUser.profilePicture,
-                userAge: newUser.userAge,
-                surveyAnswers: newUser.surveyAnswers
+                firstName: newUser.firstName,
+                lastName: newUser.lastName,
+                profilePicture: newUser.profilePic,
+                userAge: newUser.age,
+                userGender: newUser.userGender,
+                lookingFor: newUser.lookingFor
+                // surveyAnswers: newUser.surveyAnswers
               });
               res.json(response);
             } catch(e) {
