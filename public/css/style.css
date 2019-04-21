@@ -160,7 +160,7 @@ p.you-are {
 }
 
 h2.subheader {
-    padding-top: 2em;
+    padding-top: 1em;
     font-size: 3em;
     color: #3648a0;
     font-weight: bold;
@@ -331,4 +331,13 @@ label {
     font-size: 1.3em;
 }
 
+p {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#custom-gender, 
+#custom-looking {
+    width: 10vw;
+}
 

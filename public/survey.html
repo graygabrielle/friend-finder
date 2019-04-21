@@ -52,7 +52,8 @@
                 <div class="row">
                     <div class="col s12 m6">
 
-                        <p class="left-align">You are:</p>
+                        <p class="grey-text lighten-1 left-align">You are:</p>
+                        
                         <label class="radio left-align">
                             <input name="user-gender" type="radio" required>
                             <span>female</span>
@@ -65,13 +66,22 @@
 
                         <label class="radio left-align">
                             <input name="user-gender" type="radio" required>
-                            <span>other</span>
+                            <span>rather not say</span>
                         </label>
+
+                        <label class="radio left-align">
+                            <input name="user-gender" type="radio" id="radio-gender" value="custom" onclick="ShowHiddenDiv()" required>
+                            <span>custom</span>
+                            <span id="custom-gender" style="display: none">
+                            <input type="text" id="custom-box1" name="custom-gender">
+                            </span>
+                        </label>
+
                     </div>
 
                     <div class="col s12 m6">
 
-                        <p class="left-align">Looking for:</p>
+                        <p class="grey-text lighten-1 left-align">Looking for:</p>
                         <label class="radio left-align">
                             <input name="looking-for" type="radio" required>
                             <span>female</span>
@@ -84,7 +94,15 @@
 
                         <label class="radio left-align">
                             <input name="looking-for" type="radio" required>
-                            <span>any</span>
+                            <span>all</span>
+                        </label>
+
+                        <label class="radio left-align">
+                            <input name="looking-for" type="radio" id="radio-looking" value="custom" onclick="ShowHiddenDiv2()" required>
+                            <span>custom</span>
+                            <span id="custom-looking" style="display: none">
+                            <input type="text" id="custom-box1" name="custom-looking">
+                            </span>
                         </label>
         
                     </div>
@@ -193,13 +211,6 @@
                     </p>
                 </div>
             </div>
-            <!-- <div class="header3">
-                    <div class="header-div">
-                        <h2 class="header-survey">Agree or Disagree</h2>
-                        <h3 class="header-explain">Drag the slider to rate each statement on a scale from 1 to 5</h3>
-                        <a href="#survey" class="button2 button-white">survey</a>
-                    </div>
-            </div> -->
 
             <div class="header4">
                 <div class="header-div">
@@ -213,11 +224,22 @@
 
     </main>
 
-<script>
-    var array_of_dom_elements = document.querySelectorAll("input[type=range]");
-    M.Range.init(array_of_dom_elements);
+    <script>
+        var array_of_dom_elements = document.querySelectorAll("input[type=range]");
+        M.Range.init(array_of_dom_elements);
 
-</script>
+        function ShowHiddenDiv() {
+            var custom = document.getElementById("radio-gender");
+            var dvtext = document.getElementById("custom-gender");
+            dvtext.style.display = custom.checked ? "block" : "none";
+        }
+
+        function ShowHiddenDiv2() {
+            var custom = document.getElementById("radio-looking");
+            var dvtext = document.getElementById("custom-looking");
+            dvtext.style.display = custom.checked ? "block" : "none";
+        }
+    </script>
 
 </body>
 </html>
