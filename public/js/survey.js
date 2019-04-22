@@ -52,13 +52,43 @@ document.getElementById("submit").addEventListener("click", function(e){
     $.post("/api", newUser)
     // On success, run the following code
     .then(function(data) {
-        console.log("data:", data);
-      const newUserId = data.id;
-      console.log("New User id:", newUserId);
-      $.get("/api", newUserId)
+        console.log(data);
+        const newUserId = data.id;
+        const newUserAnswers = JSON.parse(data.surveyAnswers);
+        const newUserGender = data.userGender;
+        const newUserLookingFor = data.lookingFor;
+        console.log("new user answers: " + newUserAnswers);
+        console.log("new user gender: " + newUserGender);
+        console.log("new user looking for: " + newUserLookingFor);
+
+      $.get("/api")
         .then(function(res){
-          console.log(res);
-      })
+            console.log(res);
+            let smallestDiff = 0;
+            let bestMatch; 
+            for(let i=0; i<res.length; i++){
+                const user = res[i];
+                const userId = user.id;
+                const userGender = user.userGender;
+                const userLookingFor = user.lookingFor;
+                
+
+                if(userId!==newUserId && userGender===newUserLookingFor && userLookingFor===newUserGender){
+                    console.log("i hit this");
+                    const userAnswers = JSON.parse(res[i].surveyAnswers);
+                    let diff = 0;
+                    for(let index=0; index<userAnswers.length; index++){
+                        diff = diff + Math.abs(parseInt(userAnswers[index])-parseInt(newUserAnswers[index]))
+                    }
+                    if(diff<smallestDiff || i===0){
+                        smallestDiff=diff;
+                        bestMatch=user;
+                    }
+                }
+            }
+            console.log("smallest diff:", smallestDiff);
+            console.log("best match:", bestMatch);
+        })
     })
     .catch(function(e){
         console.log(e);
