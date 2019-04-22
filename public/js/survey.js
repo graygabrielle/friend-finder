@@ -86,8 +86,10 @@ document.getElementById("submit").addEventListener("click", function(e){
                     }
                 }
             }
-            console.log("smallest diff:", smallestDiff);
             console.log("best match:", bestMatch);
+            
+            window.location.replace("/bestmatch.html?id=" + bestMatch.id);
+
         })
     })
     .catch(function(e){

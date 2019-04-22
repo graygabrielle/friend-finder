@@ -8,4 +8,7 @@ htmlRouter.route("/")
 htmlRouter.route("/survey")
     .get(htmlController.getSurvey);
 
+htmlRouter.route("/bestmatch")
+    .get(htmlController.getBestMatch);
+
 module.exports = htmlRouter; 

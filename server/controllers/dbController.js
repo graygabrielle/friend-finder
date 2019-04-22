@@ -12,7 +12,19 @@ const dbController = {
       res.send(e);
     }
   },
-
+  getMatch: async function(req, res){
+    try{
+      const match = await db.User.findOne({
+        where: {
+          id: req.query.id
+        }
+      })
+      res.json(match);
+    }
+    catch(e){
+      res.send(e);
+    }
+  },
   post: async function(req, res){
     try{
       const newUser = req.body;

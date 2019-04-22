@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Best Match</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>    
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-div">
+            <span class="header-main">Your best match is</span>
+            <span class="header-secondary">someone great!</span>
+        </div>
+    </header>
+
+<script>
+console.log(window.location.search)
+
+$.urlParam = function (name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                      .exec(window.location.search);
+
+    return (results !== null) ? results[1] || 0 : false;
+}
+
+console.log($.urlParam('id'));
+
+
+
+$.get("/api/match?id=" + $.urlParam('id'))
+    .then (function(bestMatch){
+        console.log("best match:", bestMatch);
+        console.log(bestMatch.firstName);
+    })
+
+
+
+
+</script>
+</body>
+
+</html>
