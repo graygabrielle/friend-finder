@@ -247,6 +247,10 @@ input.button2:active {
     box-shadow: 0 5px 10px rgba(0,0,0,.4);
 }
 
+input.button2:focus {
+    outline: none;
+}
+
 .button-white{
     background-color: #fff;
 }

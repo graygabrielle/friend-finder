@@ -46,13 +46,19 @@ document.getElementById("submit").addEventListener("click", function(e){
         age: $("#age").val().trim(),
         userGender: $("input[name='user-gender']:checked").val().trim(),
         lookingFor: $("input[name='lookingFor']:checked").val().trim(),
-        surveyAnswers: surveyAnswers
+        surveyAnswers: JSON.stringify(surveyAnswers)
     }
 
     $.post("/api", newUser)
     // On success, run the following code
     .then(function(data) {
-      console.log("New User:", data);
+        console.log("data:", data);
+      const newUserId = data.id;
+      console.log("New User id:", newUserId);
+      $.get("/api", newUserId)
+        .then(function(res){
+          console.log(res);
+      })
     })
     .catch(function(e){
         console.log(e);

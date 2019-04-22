@@ -1,5 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
-    const User = sequelize.define("user", {
+    console.log("creating users");
+    const User = sequelize.define("User", {
         firstName: {
             type: DataTypes.STRING,
             allowNull: false
@@ -8,11 +9,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        profilePicture: {
+        profilePic: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        userAge: {
+        age: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
@@ -25,8 +26,8 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         surveyAnswers: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER),
-            allowNull: true
+            type: DataTypes.STRING,
+            allowNull: false
         }
     })
 

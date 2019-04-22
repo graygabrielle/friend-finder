@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const router = require("./routes");
+const db = require("../db/models");
 
 const PORT = process.env.PORT || 3000;
 
@@ -18,6 +19,16 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use("/", router);
 
 
+db.sequelize.sync({
+    force: false
+}).then(function () {
+
+console.log("database synced and table created");
 app.listen(PORT, function () {
     console.log(`App listening on http://localhost:${PORT}`)
-});
+})
+
+})
+.catch(function(e){
+    console.log(e);
+})
