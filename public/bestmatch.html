@@ -14,12 +14,12 @@
     <header class="header">
         <div class="header-div">
             <span class="header-main">Your best match is</span>
-            <span class="header-secondary">someone great!</span>
+            <span class="header-secondary"></span>
         </div>
     </header>
 
 <script>
-console.log(window.location.search)
+// console.log(window.location.search)
 
 $.urlParam = function (name) {
     var results = new RegExp('[\?&]' + name + '=([^&#]*)')
@@ -36,6 +36,7 @@ $.get("/api/match?id=" + $.urlParam('id'))
     .then (function(bestMatch){
         console.log("best match:", bestMatch);
         console.log(bestMatch.firstName);
+        $(".header-secondary").append(bestMatch.firstName);
     })
 
 
