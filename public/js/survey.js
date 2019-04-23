@@ -90,7 +90,7 @@ document.getElementById("submit").addEventListener("click", function(e){
             }
             console.log("best match:", bestMatch);
             
-            window.location.replace("/bestmatch.html?id=" + bestMatch.id);
+            // window.location.replace("/bestmatch.html?id=" + bestMatch.id);
 
         })
     })
