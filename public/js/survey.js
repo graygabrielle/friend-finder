@@ -65,7 +65,7 @@ document.getElementById("submit").addEventListener("click", function(e){
         .then(function(res){
             console.log(res);
             let smallestDiff = 0;
-            let bestMatch; 
+            let bestMatch = "Sorry, we could not find a best match for you!"; 
             for(let i=0; i<res.length; i++){
                 const user = res[i];
                 const userId = user.id;
@@ -74,13 +74,15 @@ document.getElementById("submit").addEventListener("click", function(e){
                 
 
                 if(userId!==newUserId && userGender===newUserLookingFor && userLookingFor===newUserGender){
-                    console.log("i hit this");
+                    console.log("user id:", userId);
                     const userAnswers = JSON.parse(res[i].surveyAnswers);
+                    console.log("user answers:", userAnswers);
                     let diff = 0;
                     for(let index=0; index<userAnswers.length; index++){
                         diff = diff + Math.abs(parseInt(userAnswers[index])-parseInt(newUserAnswers[index]))
                     }
-                    if(diff<smallestDiff || i===0){
+                    console.log(diff);
+                    if(diff<=smallestDiff || i===0){
                         smallestDiff=diff;
                         bestMatch=user;
                     }

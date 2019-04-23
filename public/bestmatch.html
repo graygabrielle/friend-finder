@@ -11,10 +11,12 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-div">
-            <span class="header-main">Your best match is</span>
-            <span class="header-secondary"></span>
+    <header class="header5">
+        <div class="header-div-results">
+            <span class="header-main2">Your best match is</span>
+            <span class="header-results"></span>
+            <span class="age-results"></span>
+            <img class="best-match-photo" alt="best match">
         </div>
     </header>
 
@@ -36,7 +38,10 @@ $.get("/api/match?id=" + $.urlParam('id'))
     .then (function(bestMatch){
         console.log("best match:", bestMatch);
         console.log(bestMatch.firstName);
-        $(".header-secondary").append(bestMatch.firstName);
+        $(".header-results").append(bestMatch.firstName);
+        $(".header-results").append(" " + bestMatch.lastName);
+        $(".age-results").append(bestMatch.age + " years old");
+        $(".best-match-photo").attr("src", bestMatch.profilePic);
     })
 
 
