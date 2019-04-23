@@ -73,7 +73,7 @@ document.getElementById("submit").addEventListener("click", function(e){
                 const userLookingFor = user.lookingFor;
                 
 
-                if(userId!==newUserId && userGender===newUserLookingFor && userLookingFor===newUserGender){
+                if(userId!==newUserId && ((newUserLookingFor==="all" && (userLookingFor===newUserGender || userLookingFor==="all")) || (userGender===newUserLookingFor && userLookingFor===newUserGender))){
                     console.log("user id:", userId);
                     const userAnswers = JSON.parse(res[i].surveyAnswers);
                     console.log("user answers:", userAnswers);
