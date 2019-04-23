@@ -203,6 +203,18 @@ p.you-are {
     margin-bottom: 8vh;
 }
 
+.header-no-match {
+    display: block;
+    font-size: 1.75em;
+    font-weight: normal;
+    letter-spacing: 6px;
+    animation-name: moveInLeft;
+    animation-fill-mode: backwards;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    margin-bottom: 8vh;
+}
+
 .header-results {
     display: block;
     font-size: 3em;

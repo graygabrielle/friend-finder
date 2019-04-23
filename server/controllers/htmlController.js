@@ -9,6 +9,9 @@ const htmlController = {
     },
     getBestMatch: function(req, res){
         res.sendFile(path.join(__dirname, "../../public/bestmatch.html"));
+    },
+    getNoMatch: function(req, res){
+        res.sendFile(path.join(__dirname, "../../public/nomatch.html"));
     }
 }
 

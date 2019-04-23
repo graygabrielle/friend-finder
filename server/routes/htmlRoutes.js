@@ -11,4 +11,7 @@ htmlRouter.route("/survey")
 htmlRouter.route("/bestmatch")
     .get(htmlController.getBestMatch);
 
+htmlRouter.route("/nomatch")
+    .get(htmlController.getNoMatch);
+
 module.exports = htmlRouter; 

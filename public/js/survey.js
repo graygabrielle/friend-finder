@@ -65,7 +65,7 @@ document.getElementById("submit").addEventListener("click", function(e){
         .then(function(res){
             console.log(res);
             let smallestDiff;
-            let bestMatch = "Sorry, we could not find a best match for you!"; 
+            let bestMatch = "no matches"; 
             for(let i=0; i<res.length; i++){
                 const user = res[i];
                 const userId = user.id;
@@ -88,9 +88,13 @@ document.getElementById("submit").addEventListener("click", function(e){
                     }
                 }
             }
-            console.log("best match:", bestMatch);
-            
-            window.location.replace("/bestmatch.html?id=" + bestMatch.id);
+            // console.log("best match:", bestMatch);
+            if(bestMatch==="no matches"){
+                window.location.replace("/nomatch.html");
+            }else{
+                window.location.replace("/bestmatch.html?id=" + bestMatch.id);
+            }
+
 
         })
     })
