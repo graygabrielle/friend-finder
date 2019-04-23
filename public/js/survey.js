@@ -81,8 +81,8 @@ document.getElementById("submit").addEventListener("click", function(e){
                     for(let index=0; index<userAnswers.length; index++){
                         diff = diff + Math.abs(parseInt(userAnswers[index])-parseInt(newUserAnswers[index]))
                     }
-                    console.log(diff);
-                    if(diff<=smallestDiff || i===0){
+                    console.log("difference:", diff);
+                    if(i===0 || diff<=smallestDiff){
                         smallestDiff=diff;
                         bestMatch=user;
                     }
