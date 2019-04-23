@@ -64,7 +64,7 @@ document.getElementById("submit").addEventListener("click", function(e){
       $.get("/api")
         .then(function(res){
             console.log(res);
-            let smallestDiff = 0;
+            let smallestDiff;
             let bestMatch = "Sorry, we could not find a best match for you!"; 
             for(let i=0; i<res.length; i++){
                 const user = res[i];
@@ -82,7 +82,7 @@ document.getElementById("submit").addEventListener("click", function(e){
                         diff = diff + Math.abs(parseInt(userAnswers[index])-parseInt(newUserAnswers[index]))
                     }
                     console.log("difference:", diff);
-                    if(i===0 || diff<=smallestDiff){
+                    if(!smallestDiff || diff<=smallestDiff){
                         smallestDiff=diff;
                         bestMatch=user;
                     }
