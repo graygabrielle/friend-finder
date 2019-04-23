@@ -20,7 +20,7 @@ app.use("/", router);
 
 
 db.sequelize.sync({
-    force: true
+    force: false
 }).then(function () {
 
 console.log("database synced and table created");
